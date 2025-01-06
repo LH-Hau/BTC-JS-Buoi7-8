@@ -56,6 +56,16 @@ let soDuongMin = () => {
   document.getElementById("result-soDuongMin").innerHTML = resultSDMin;
 };
 
+let lastSoChan = () => {
+  for (let i = numberArr.length - 1; i >= 0; i--) {
+    if (numberArr[i] % 2 == 0) {
+      let soChanCuoi = numberArr[i];
+      return (document.getElementById("lastSoChan").innerHTML = soChanCuoi);
+    }
+  }
+  return (document.getElementById("lastSoChan").innerHTML = "không có số chẵn");
+};
+
 let submit = () => {
   // thêm phần tử vào mảng
   getDataForm();
@@ -71,4 +81,7 @@ let submit = () => {
 
   //số dương nhỏ nhất
   soDuongMin();
+
+  // số chẵn cuối cùng
+  lastSoChan();
 };
