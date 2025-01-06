@@ -104,3 +104,23 @@ let sapXep = () => {
     return (document.getElementById("sapXep").innerHTML = numberArr);
   }
 };
+
+let ktraSNT = (num) => {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+};
+
+let timSNT = () => {
+  for (let i = 0; i < numberArr.length; i++) {
+    for (let num of numberArr)
+      if (ktraSNT(num)) {
+        return (document.getElementById("soNT").innerHTML = num);
+      }
+    break;
+  }
+  return (document.getElementById("soNT").innerHTML =
+    "Không tìm thấy số nguyên tố");
+};
