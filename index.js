@@ -85,3 +85,15 @@ let submit = () => {
   // số chẵn cuối cùng
   lastSoChan();
 };
+
+let doiCho = () => {
+  for (let i = 0; i < numberArr.length; i++) {
+    let index1 = document.getElementById("viTri1").value * 1;
+    let index2 = document.getElementById("viTri2").value * 1;
+
+    let bienTam = numberArr[index1];
+    numberArr[index1] = numberArr[index2];
+    numberArr[index2] = bienTam;
+    return (document.getElementById("doiCho").innerHTML = numberArr);
+  }
+};
