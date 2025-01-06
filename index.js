@@ -97,3 +97,10 @@ let doiCho = () => {
     return (document.getElementById("doiCho").innerHTML = numberArr);
   }
 };
+
+let sapXep = () => {
+  for (let i = 0; i < numberArr.length; i++) {
+    numberArr.sort((a, b) => a - b);
+    return (document.getElementById("sapXep").innerHTML = numberArr);
+  }
+};
